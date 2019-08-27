@@ -48,7 +48,7 @@ class BabySitterTest {
 	}
 	
 	@Test
-	public void testCalculateShiftFrom5PMTo4AM() {
+	public void testCalculateShiftFrom5PMTo4AM() { //test normal shift
 		babysitter.setStartTime("5:00 PM");
 		babysitter.setBedTime("9:00 PM");
 		babysitter.setEndTime("4:00 AM");
@@ -56,7 +56,7 @@ class BabySitterTest {
 	}
 	
 	@Test
-	public void testCalculateShiftFrom5PMTo8PM() {
+	public void testCalculateShiftFrom5PMTo8PM() { //test start time, end time inside bracket
 		babysitter.setStartTime("5:00 PM");
 		babysitter.setBedTime("9:00 PM");
 		babysitter.setEndTime("8:00 PM");
@@ -64,7 +64,7 @@ class BabySitterTest {
 	}
 	
 	@Test
-	public void testCalculateShiftFrom1AMTo3AM() {
+	public void testCalculateShiftFrom1AMTo3AM() { //test start time, end time inside bracket
 		babysitter.setStartTime("1:00 AM");
 		babysitter.setBedTime("9:00 PM");
 		babysitter.setEndTime("3:00 AM");
@@ -72,7 +72,7 @@ class BabySitterTest {
 	}
 	
 	@Test
-	public void testCalculateShiftFrom10PMTo0AM() {
+	public void testCalculateShiftFrom10PMTo0AM() { //test start time, end time inside bracket
 		babysitter.setStartTime("10:00 PM");
 		babysitter.setBedTime("9:00 PM");
 		babysitter.setEndTime("0:00 AM");

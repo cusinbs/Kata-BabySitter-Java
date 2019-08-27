@@ -22,7 +22,6 @@ public class TimeOperations {
 		} catch (ParseException e) {
 			return ""; //if it is not convertible, return empty string
 		}
-		//System.out.println(TwentyFourHrsFormat.format(date));
 		return TwentyFourHrsFormat.format(date);
 	}
 	
