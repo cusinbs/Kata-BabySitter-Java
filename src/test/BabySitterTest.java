@@ -47,7 +47,7 @@ class BabySitterTest {
 		assertNull(babysitter.getBedTime()); // test input outside the range, should return null
 	}
 	
-	//@Test
+	@Test
 	public void testCalculateShiftFrom5PMTo4AM() {
 		babysitter.setStartTime("5:00 PM");
 		babysitter.setBedTime("9:00 PM");
@@ -55,6 +55,7 @@ class BabySitterTest {
 		assertEquals(136, babysitter.getNightlyCharge());
 	}
 	
+	@Test
 	public void testCalculateShiftFrom5PMTo8PM() {
 		babysitter.setStartTime("5:00 PM");
 		babysitter.setBedTime("9:00 PM");
@@ -62,15 +63,15 @@ class BabySitterTest {
 		assertEquals(36, babysitter.getNightlyCharge());
 	}
 	
-	//@Test
-	public void testCalculateShiftFrom1AMTo4AM() {
+	@Test
+	public void testCalculateShiftFrom1AMTo3AM() {
 		babysitter.setStartTime("1:00 AM");
 		babysitter.setBedTime("9:00 PM");
-		babysitter.setEndTime("4:00 AM");
-		assertEquals(48, babysitter.getNightlyCharge());
+		babysitter.setEndTime("3:00 AM");
+		assertEquals(32, babysitter.getNightlyCharge());
 	}
 	
-	//@Test
+	@Test
 	public void testCalculateShiftFrom10PMTo0AM() {
 		babysitter.setStartTime("10:00 PM");
 		babysitter.setBedTime("9:00 PM");
@@ -78,7 +79,7 @@ class BabySitterTest {
 		assertEquals(16, babysitter.getNightlyCharge());
 	}
 	
-	//@Test
+	@Test
 	public void testCalculateEndTimeBeforeBedShift() {
 		babysitter.setStartTime("6:00 PM");
 		babysitter.setBedTime("9:00 PM");
@@ -86,7 +87,7 @@ class BabySitterTest {
 		assertEquals(24, babysitter.getNightlyCharge());
 	}
 	
-	//@Test
+	@Test
 	public void testCalculateEndTimeAfterBedShift() {
 		babysitter.setStartTime("6:00 PM");
 		babysitter.setBedTime("9:30 PM");
@@ -94,7 +95,7 @@ class BabySitterTest {
 		assertEquals(56, babysitter.getNightlyCharge());
 	}
 	
-	//@Test
+	@Test
 	public void testCalculateEndTimeAfterBedBeforeMidShift() {
 		babysitter.setStartTime("20:00");
 		babysitter.setBedTime("9:00 PM");
@@ -102,7 +103,7 @@ class BabySitterTest {
 		assertEquals(28, babysitter.getNightlyCharge()); 
 	}
 	
-	//@Test
+	@Test
 	public void testCalculateEndTimeAfterMidShift() {
 		babysitter.setStartTime("20:00");
 		babysitter.setBedTime("10:00 PM");
